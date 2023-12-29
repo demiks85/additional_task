@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Виселиця</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <div id="main-menu">
+    <h3>виселица</h3>
+    <button onclick="newGame()">Начать игру</button>
+    <button onclick="showRecords()">Правила игры</button>
+    <button onclick="showRules()">Рекорды</button>
+  </div>
+
+  <div id="game-registration" style="display: none;">
+    <div id="return-button-registration">
+      <button onclick="confirmReturnToMainMenu1()">Вернуться на главное меню</button>
+      </div>
+
+      <h1>Выберите категорию:</h1>
+
+
+      <select id="categorySelect">
+        <option value="Животные">Животные</option>
+        <option value="Растения">Растения</option>
+        <option value="Продукты">Продукты</option>
+        <option value="Виды спорта">Виды спорта</option>
+        <option value="Страны мира">Страны мира</option>
+      </select>
+      <h1>Введите ваше имя:</h1>
+  <input type="text" id="playerName" placeholder="Введите имя" oninput="validateInput(this)">
+
+      <button onclick="startGame()">Начать игру</button>
+    </div>
+
+<div id="game-container" style="display: none;">
+  <div id="return-button-container">
+    <button onclick="confirmReturnToMainMenu2()">Вернуться на главное меню</button>
+  </div>
+
+<img id="myImage" src="assets/0.png" alt="Опис зображення"width="350" height="300" >
+
+<div id="hangman">Осталось жизней: <span id="hangman-state"></span></div>
+<div id="word">Слово: <span id="word-state"></span></div>
+<div id="selectedCategory">Выбрана категория: <span id="used-selected-category"></span></div>
+<div id="letters">Использованые букви: <span id="used-letters"></span></div>
+<div id="keyboard">
+    <button class="key" onclick="handleKey(this,'й')">й</button>
+    <button class="key" onclick="handleKey(this,'ц')">ц</button>
+    <button class="key" onclick="handleKey(this,'у')">у</button>
+    <button class="key" onclick="handleKey(this,'к')">к</button>
+    <button class="key" onclick="handleKey(this,'е')">е</button>
+    <button class="key" onclick="handleKey(this,'н')">н</button>
+    <button class="key" onclick="handleKey(this,'г')">г</button>
+    <button class="key" onclick="handleKey(this,'ш')">ш</button>
+    <button class="key" onclick="handleKey(this,'щ')">щ</button>
+    <button class="key" onclick="handleKey(this,'з')">з</button>
+    <button class="key" onclick="handleKey(this,'х')">х</button>
+      <button class="key" onclick="handleKey(this,'ф')">ф</button>
+      <button class="key" onclick="handleKey(this,'ы')">ы</button>
+      <button class="key" onclick="handleKey(this,'в')">в</button>
+      <button class="key" onclick="handleKey(this,'а')">а</button>
+      <button class="key" onclick="handleKey(this,'п')">п</button>
+      <button class="key" onclick="handleKey(this,'р')">р</button>
+      <button class="key" onclick="handleKey(this,'о')">о</button>
+      <button class="key" onclick="handleKey(this,'л')">л</button>
+      <button class="key" onclick="handleKey(this,'д')">д</button>
+      <button class="key" onclick="handleKey(this,'ж')">ж</button>
+      <button class="key" onclick="handleKey(this,'э')">э</button>
+        <button class="key" onclick="handleKey(this,'я')">я</button>
+        <button class="key" onclick="handleKey(this,'ч')">ч</button>
+        <button class="key" onclick="handleKey(this,'с')">с</button>
+        <button class="key" onclick="handleKey(this,'м')">м</button>
+        <button class="key" onclick="handleKey(this,'и')">и</button>
+        <button class="key" onclick="handleKey(this,'т')">т</button>
+        <button class="key" onclick="handleKey(this,'ь')">ь</button>
+        <button class="key" onclick="handleKey(this,'б')">б</button>
+        <button class="key" onclick="handleKey(this,'ю')">ю</button>
+        <button class="key" onclick="handleKey(this,'ё')">ё</button>
+        <button class="key" onclick="handleKey(this,'ъ')">ъ</button>
+</div>
+  </div>
+    <hr>
+  <div id="record" style="display: none;">
+    <div id="return-button-record">
+      <button onclick="confirmReturnToMainMenu1()">Вернуться на главное меню</button>
+      </div>
+    <p>Тебе нужно угадать мое загаданное слово. тебе нужно нажимать на кнопки</p>
+    <p>У тебя есть 11 жизни В. поэтому будь внимательной</p>
+    <p>Чтобы знать сколько у тебя осталось жизней ты можешь ориентироваться по рисунку, или на тексте "осталось попыток ..."</p>
+    <p>Будь внимателен и хорошо тебе провести время</p>
+  </div>
+
+
+  <script src="script1.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+#hangman {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#word {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#letters {
+    font-size: 20px;
+}
+
+#keyboard {
+    position: fixed;
+    bottom: 100px;
+    left: 15%;
+    transform: translateX(-45%);
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    gap: 5px;
+}
+
+#return-button-container {
+  position: fixed;
+  top: 0;
+  left: 10%;
+  transform: translateX(-50%);
+  background-color: #f0f0f0;
+  padding: 10px;
+  display: none;
+}
+#game-container {
+  position: relative;
+
+}
+#myImage{
+  display: block;
+  margin-top: 50px;
+  max-width: 100%;
+}
+.key {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #fff;
+     transition: background-color 0.3s ease;
+}
+
+.key.clicked_true {
+    background-color: green;
+    pointer-events: none;
+}
+.key.clicked_false {
+    background-color: red;
+    pointer-events: none; 
+}
+
+.key:hover {
+    background-color: #f0f0f0;
+}
